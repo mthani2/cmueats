@@ -10,7 +10,7 @@ const RatingFormPage = () => {
       },
       '& .MuiOutlinedInput-root': {
         '& fieldset': {
-          borderColor: 'grey',  // Default border color
+          borderColor: 'green',  // Default border color
         },
         '&:hover fieldset': {
           borderColor: 'green',  // Border color changes to green on hover
