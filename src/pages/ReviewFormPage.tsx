@@ -2,24 +2,31 @@ import { useState } from 'react';
 import { Typography, Button, TextField, Checkbox, FormControlLabel } from '@mui/material';
 
 const RatingFormPage = () => {
-    // Defined textFieldStyles
-    const textFieldStyles = {
-      backgroundColor: '#2D2F32',  // Adjust the background color if needed
-      '& label.Mui-focused': {
-        color: 'green',  // Changes the label color to green when focused
+  const textFieldStyles = {
+    '& .MuiInputBase-root': {
+      color: 'white', // input text color is white
+    },
+    '& label.Mui-focused': {
+      color: 'green', //  label color to green when focused
+    },
+    '& .MuiInputLabel-root': {
+      color: 'white', // label text color is white
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'green', // default border color is white
       },
-      '& .MuiOutlinedInput-root': {
-        '& fieldset': {
-          borderColor: 'green',  // Default border color
-        },
-        '&:hover fieldset': {
-          borderColor: 'green',  // Border color changes to green on hover
-        },
-        '&.Mui-focused fieldset': {
-          borderColor: 'green',  // Border color when the input is focused
-        },
-      }
-    };
+      '&:hover fieldset': {
+        borderColor: 'white', // border color to green on hover
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'lightgreen', // border color to light green when focused
+      },
+    },
+  };
+
+
+
 
   const [userEmail, setUserEmail] = useState('');
   const [selectedRestaurant, setSelectedRestaurant] = useState('');
@@ -61,7 +68,7 @@ const RatingFormPage = () => {
           value={selectedRestaurant}
           onChange={(e) => setSelectedRestaurant(e.target.value)}
         >
-    <option value="">-- Select a Restaurant --</option>
+    <option value=""></option>
   <option value="stephanies@example.com">Stephanie's - Market c</option>
   <option value="scottys@example.com">Scotty's Market By Salem's</option>
   <option value="aubonpain@example.com">Au Bon Pain At Skibo Café</option>
