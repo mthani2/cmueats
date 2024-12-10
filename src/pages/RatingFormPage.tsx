@@ -14,21 +14,25 @@ const RatingPage = () => {
   const [overallSatisfactionRating, setOverallSatisfactionRating] = useState(3); // Overall satisfaction rating state
   const [selectedRestaurant, setSelectedRestaurant] = useState(''); // Restaurant selection state
 
-  // Define textFieldStyles for styling
   const textFieldStyles = {
-    backgroundColor: '#2D2F32',
+    '& .MuiInputBase-root': {
+      color: 'white', // input text  is white
+    },
     '& label.Mui-focused': {
-      color: 'green',
+      color: 'green', // label color changes to green when focused
+    },
+    '& .MuiInputLabel-root': {
+      color: 'white', // label text is white
     },
     '& .MuiOutlinedInput-root': {
       '& fieldset': {
-        borderColor: 'white',
+        borderColor: 'green', // border (default) color is white
       },
       '&:hover fieldset': {
-        borderColor: 'green',
+        borderColor: 'white', // color changes to green on hover
       },
       '&.Mui-focused fieldset': {
-        borderColor: 'green',
+        borderColor: 'lightgreen', // color changes to light green when focused
       },
     },
   };
