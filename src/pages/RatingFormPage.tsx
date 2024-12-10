@@ -16,7 +16,7 @@ const RatingPage = () => {
 
   const textFieldStyles = {
     '& .MuiInputBase-root': {
-      color: 'white', // input text  is white
+      color: 'white', // input text is white
     },
     '& label.Mui-focused': {
       color: 'green', // label color changes to green when focused
